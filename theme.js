@@ -16,7 +16,7 @@ $( document ).ready(function() {
     $("table.docutils:not(.field-list)").wrap("<div class='wy-table-responsive'></div>");	
 	// ---
 	// START DOC MODIFICATION BY RUFNEX
-	// v1.0 27.01.2015
+	// v1.0 04.02.2015
 	// Add ToogleButton to get FullWidth-View by Johannes Gamperl codeigniter.de		
 	var ciNav = '<style >#nav { background-color: #494949; margin: 0; padding: 0;display:none;}#nav2 { background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAARgAA/+4ADkFkb2JlAGTAAAAAAf/bAIQABAMDAwMDBAMDBAYEAwQGBwUEBAUHCAYGBwYGCAoICQkJCQgKCgwMDAwMCgwMDQ0MDBERERERFBQUFBQUFBQUFAEEBQUIBwgPCgoPFA4ODhQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAMgAzAwERAAIRAQMRAf/EAFkAAQADAQAAAAAAAAAAAAAAAAABBQcIAQEAAAAAAAAAAAAAAAAAAAAAEAABAgYDAAAAAAAAAAAAAAAAAVERAtMEFJRVBxgRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMRAAAAAAAA7a87dZcCu3e1wHnbrLgV272uA87dZcCu3e1wHnbrLgV272uA87dZcCu3e1wHnbrLgV272uA87dZcCu3e1wN/wJGAYEjAMCRgGBIwDAkYBgSMAwJGAsoIwCCMAgjAIIwCCMAgjAIIwEgAAAAAAAAAAAAAAAAAAAAAAAH//2Q==) repeat-x scroll left top transparent; margin: 0; padding: 0 310px 0 0; text-align: right;display:none;}#nav_inner { background-color: transparent; font-family: Lucida Grande,Verdana,Geneva,sans-serif; font-size: 11px; margin: 0; padding: 8px 12px 0 20px;}table.ciNav { background-color: #494949; width: 100%; }table.ciNav ul { margin: 10px; margin-top:0; padding: 5px; }table.ciNav td li { font-size:0.82em; margin-left: 20px; list-style-image: url(data:image/gif;base64,R0lGODlhCwAJALMJAO7u7uTk5PLy8unp6fb29t7e3vj4+Li4uIWFheTk5AAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAkALAAAAAALAAkAAAQoMJ1JqTQ4Z3SI98jHCWSJkByArCyiHkMsIzEX3DeCc0Xv+4hEa5iIAAA7); }table.ciNav h3 { margin:0; margin-left: 10px; }table.ciNav h3.first { margin-bottom: 20px; }table.ciNav h3 a { color:#fff;text-decoration: none; font-size:12px; }table.ciNav td li a { color:#fff;text-decoration: none; font-size:11px; line-height:1.4em; font-weight: 300; color: #aaa; }table.ciNav td.td_sep {padding-left:20px; background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAARgAA/+4ADkFkb2JlAGTAAAAAAf/bAIQABAMDAwMDBAMDBAYEAwQGBwUEBAUHCAYGBwYGCAoICQkJCQgKCgwMDAwMCgwMDQ0MDBERERERFBQUFBQUFBQUFAEEBQUIBwgPCgoPFA4ODhQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgACAACAwERAAIRAQMRAf/EAEsAAQAAAAAAAAAAAAAAAAAAAAcBAQAAAAAAAAAAAAAAAAAAAAAQAQEAAAAAAAAAAAAAAAAAAADVEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwAesg//2Q==) repeat-y scroll left top transparent;}</style>';
 	ciNav += '<div style="background:#494949;"><div id="nav"><div id="nav_inner">';
@@ -25,7 +25,7 @@ $( document ).ready(function() {
 	$('body').prepend(ciNav);
 	//
 	var a = ['Index', 'CodeIgniter User Guide¶', 'Change Log¶', 'Developer’s Certificate of Origin 1.1¶', 'The MIT License (MIT)¶'];
-	if ($.inArray($('h1').text(), a) > 0 || $('h1').text() == 'Search Results')
+	if ($.inArray($('h1').text(), a) > 0 || $('h2').text() == 'Search Results')
 	{
 		$('table.ciNav a').each(function(){
 			$(this).attr('href', $(this).attr("href").replace('../', ''));
